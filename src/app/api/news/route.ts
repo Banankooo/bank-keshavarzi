@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { readJsonDb, writeJsonDb } from "@/lib/json-db";
 import { fetchLiveWebNewsForQuery } from "@/lib/news-engine";
 
+export const dynamic = "force-static";
+
 export async function GET(request: NextRequest) {
   try {
     const dbData = await readJsonDb();
